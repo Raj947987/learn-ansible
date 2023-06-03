@@ -1,5 +1,5 @@
 - task: Demo on roles
-  hosts: localhost
+  hosts: all
   connection: local
   roles:
     - sample
