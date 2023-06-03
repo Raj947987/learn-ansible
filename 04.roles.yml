@@ -1,4 +1,4 @@
-- task: Demo on roles
+- name: Demo on roles
   hosts: localhost
   connection: local
   roles:
