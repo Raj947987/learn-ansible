@@ -1,6 +1,6 @@
 - name: demo on conditions
   hosts: localhost
-  connections: local
+  connection: local
   tasks:
     - name: Print hello universe
       ansible.builtin.debug:
