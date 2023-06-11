@@ -1,0 +1,12 @@
+- name: demo on conditions
+  hosts: localhost
+  connections: local
+  tasks:
+    - name: Print hello universe
+      ansible.builtin.debug:
+        msg: Hello universe
+        when: what == "universe"
+    - name: Print hello world
+      ansible.builtin.debug:
+        msg: Hello world
+        when: what == "world"
