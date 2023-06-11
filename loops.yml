@@ -1,0 +1,13 @@
+- name: demo on loops
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Print fruit
+      ansible.builtin.debug:
+        msg: Hello universe
+        when: what == "universe"
+
+    - name: Print hello world
+      ansible.builtin.debug:
+        msg: Hello world
+        when: what == "world"
