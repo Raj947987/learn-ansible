@@ -2,12 +2,20 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: Print fruit
+    - name: Print fruit Name
       ansible.builtin.debug:
-        msg: Hello universe
-        when: what == "universe"
-
-    - name: Print hello world
+        msg: Fruit Name - {{ item }}
+      loop:
+          - Apple
+          - Banana
+          - Orange
+          - Grapes
+          - Water Apple
+    - name: Fruit name with quantity
       ansible.builtin.debug:
-        msg: Hello world
-        when: what == "world"
+        msg: Fruit Name - {{ item.name }}, Quantity - {{ item.quantity }}
+      loop:
+        - { name: Apple, Quantity: 100 }
+        - { name: Banana, Quantity: 200 }
+        - { name: Grapes, Quantity: 300 }
+        - { name: Water Apple, Quantity: 500 }
